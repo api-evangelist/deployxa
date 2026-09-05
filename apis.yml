@@ -1,0 +1,45 @@
+name: Deployxa
+description: AI-first autonomous cloud deployment platform for deploying AI-built and containerized web apps to
+  production, featuring a deployment intelligence engine, global edge deployment, managed databases, VPS clusters,
+  and a CLI. Advertised REST API, MCP server, and llms.txt could not be independently verified at time of research.
+url: https://raw.githubusercontent.com/api-evangelist/deployxa/refs/heads/main/apis.yml
+created: '2026-09-05'
+modified: '2026-09-05'
+specificationVersion: '0.21'
+tags:
+- platform-as-a-service
+- cloud-deployment
+- devops
+- ci-cd
+- containers-docker
+- edge-hosting
+- managed-databases
+- ai-ops
+- developer-tools
+apis:
+- name: Deployxa Platform
+  description: AI-first autonomous cloud deployment platform. Documentation covers CLI usage, Git connection via
+    OAuth/webhooks, manifest-based detection, secrets/env config, and edge deployment. An advertised REST API (/api/v1),
+    OpenAPI, MCP server, and llms.txt exist per submitted apis.json but could not be independently verified.
+  humanURL: https://deployxa.com/docs
+  baseURL: https://deployxa.com
+  tags:
+  - platform-as-a-service
+  - cloud-deployment
+  - devops
+  - ci-cd
+  - containers-docker
+  - edge-hosting
+  - managed-databases
+  - ai-ops
+  - developer-tools
+  properties:
+  - type: Documentation
+    url: https://deployxa.com/docs
+maintainers:
+- FN: Deployxa
+  url: https://deployxa.com
+x-source:
+  via: 'apis.io/add a52901f3, parked no_consumable_surface -- wrongly: openapi.json, docs and root all verified
+    live 2026-09-05 with a discriminating control. Approved by Kin.'
+  fetched: '2026-09-05'
