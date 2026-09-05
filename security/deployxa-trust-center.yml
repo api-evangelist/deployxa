@@ -1,0 +1,20 @@
+generated: '2026-09-05'
+method: searched
+probe: true
+source: https://deployxa.com/trust
+url: https://deployxa.com/trust
+certifications: []
+planned_certifications:
+- SOC 2
+- PCI DSS
+note: >-
+  The trust page's own description reads "alignment with future SOC 2 and PCI
+  DSS compliance initiatives" — stated plans, not held certifications, so the
+  keyword hits are recorded as planned rather than certified and no Compliance
+  pointer is emitted.
+evidence:
+- source: https://deployxa.com/trust
+  keywords:
+  - soc 2
+  - pci dss
+  - trust center

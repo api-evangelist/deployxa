@@ -1,0 +1,30 @@
+generated: '2026-09-05'
+method: searched
+source: openapi/deployxa-openapi-original.json + https://deployxa.com/status + https://deployxa.com/changelog
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://deployxa.com/openapi.json
+  note: >-
+    The OpenAPI info.description states the policy verbatim: "Versioned REST
+    API. Stable operations are under /api/v1; breaking changes use a new path
+    version."
+deprecation:
+  policy_url: https://deployxa.com/openapi.json
+  sunset_header: true
+  deprecation_header: true
+  note: >-
+    Declared in the published contract: "Deprecated operations announce
+    Deprecation and Sunset headers" (RFC 8594-style). No standalone deprecation
+    policy page was found.
+sla:
+  url: null
+  uptime_target: '99.99% (Enterprise Dedicated plan only, per https://deployxa.com/pricing)'
+status_page: https://deployxa.com/status
+changelog: https://deployxa.com/changelog
+deprecated_operations: []
+note: >-
+  Status and changelog pages exist (server-rendered titles "Deployxa Status
+  Center" / "Platform Releases & Changelog") but their content hydrates
+  client-side, so live component status and dated changelog entries were not
+  machine-readable at probe time.

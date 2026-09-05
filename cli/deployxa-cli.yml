@@ -1,0 +1,23 @@
+generated: '2026-09-05'
+method: searched
+source: https://deployxa.com/docs + https://registry.npmjs.org/@deployxa/cli
+name: deployxa
+package: '@deployxa/cli'
+install:
+  - method: npm
+    command: npm install -g @deployxa/cli
+binary: deployxa
+version: 1.0.4
+commands:
+  - command: deployxa login
+    description: Authenticate the CLI (shown in the API reference quickstart).
+    source: https://deployxa.com/docs/api
+  - command: deployxa up --prod
+    description: Deploy the current project to production (API reference quickstart).
+    source: https://deployxa.com/docs/api
+  - command: deployxa deploy --prod
+    description: Trigger a production deployment (docs "Getting Started in 4 Steps").
+    source: https://deployxa.com/docs
+note: >-
+  Command surface captured from the server-rendered docs pages; a full command
+  reference was not machine-readable (docs content hydrates client-side).

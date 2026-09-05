@@ -1,0 +1,56 @@
+generated: '2026-09-05'
+method: searched
+source: https://mcp.deployxa.com/.well-known/oauth-authorization-server
+docs: https://deployxa.com/auth.md
+note: >-
+  The OpenAPI declares no oauth2 securitySchemes; scopes are searched from the
+  provider's live RFC 8414 authorization-server metadata. The primary-domain
+  auth server advertises OIDC-style scopes; the MCP auth server advertises the
+  resource scopes. No per-scope prose descriptions are published — names only.
+schemes:
+  - name: Deployxa OAuth (deployxa.com)
+    source: https://deployxa.com/.well-known/oauth-authorization-server
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://deployxa.com/login
+        tokenUrl: https://deployxa.com/api/auth/token
+  - name: Deployxa MCP OAuth (mcp.deployxa.com)
+    source: https://mcp.deployxa.com/.well-known/oauth-authorization-server
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://mcp.deployxa.com/oauth/authorize
+        tokenUrl: https://mcp.deployxa.com/oauth/token
+scopes:
+  - scope: openid
+    flows: [authorizationCode]
+    sources: [https://deployxa.com/.well-known/oauth-authorization-server]
+  - scope: profile
+    flows: [authorizationCode]
+    sources: [https://deployxa.com/.well-known/oauth-authorization-server]
+  - scope: email
+    flows: [authorizationCode]
+    sources: [https://deployxa.com/.well-known/oauth-authorization-server]
+  - scope: projects:read
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: projects:write
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: deployments:read
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: deployments:write
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: domains:read
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: domains:write
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: logs:read
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]
+  - scope: billing:read
+    flows: [authorizationCode]
+    sources: [https://mcp.deployxa.com/.well-known/oauth-authorization-server]

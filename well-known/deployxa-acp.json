@@ -1,0 +1,1 @@
+{"protocol":{"name":"acp","version":"1.0"},"api_base_url":"https://deployxa.com/api","transports":["https"],"capabilities":{"services":["projects","deployments","monitoring"]}}

@@ -1,0 +1,47 @@
+generated: '2026-09-05'
+method: searched
+source: live probes of deployxa.com and mcp.deployxa.com, 2026-09-05
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: authorization-code grant documented in auth.md and both live RFC 8414 metadata documents (deployxa.com, mcp.deployxa.com)
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported [S256] in https://mcp.deployxa.com/.well-known/oauth-authorization-server; auth.md mandates PKCE
+  - id: rfc8414-authorization-server-metadata
+    conforms: true
+    evidence: HTTP 200 JSON at /.well-known/oauth-authorization-server on both hosts (saved in well-known/)
+  - id: rfc9728-protected-resource-metadata
+    conforms: true
+    evidence: HTTP 200 JSON at /.well-known/oauth-protected-resource on both hosts (saved in well-known/)
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint https://mcp.deployxa.com/oauth/register in RFC 8414 metadata
+  - id: rfc9727-api-catalog
+    conforms: true
+    evidence: linkset document at https://deployxa.com/.well-known/api-catalog (saved as well-known/deployxa-api-catalog.json)
+  - id: rfc8594-sunset-header
+    conforms: true
+    evidence: 'OpenAPI info.description: "Deprecated operations announce Deprecation and Sunset headers"'
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration returns a plain-text redirect stub, not an OIDC discovery document
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors use a custom {code, message, details} envelope, not application/problem+json
+  - id: mcp
+    conforms: true
+    evidence: hosted MCP server at https://mcp.deployxa.com/mcp (tools/list answers a 401 bearer challenge, OAuth-gated per RFC 9728 metadata)
+  - id: a2a
+    conforms: false
+    evidence: agent card served at /.well-known/agent-card.json but graded flavored — no protocolVersion, no skills array (a2a/deployxa-a2a.yml)
+  - id: ap2-agentic-payments
+    conforms: true
+    evidence: agent card declares AP2 v0.1.0 extension (roles [merchant]); OpenAPI operations carry x-payment-info Stripe charge extensions
+  - id: llms-txt
+    conforms: true
+    evidence: https://deployxa.com/llms.txt (saved verbatim as llms/deployxa-llms.txt)
+note: >-
+  The trust center (https://deployxa.com/trust) describes alignment with FUTURE
+  SOC 2 and PCI DSS compliance initiatives — stated aspirations, not held
+  certifications — so no Compliance pointer is emitted.

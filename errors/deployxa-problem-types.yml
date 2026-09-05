@@ -1,0 +1,32 @@
+generated: '2026-09-05'
+method: derived
+source: openapi/deployxa-openapi-original.json
+format: custom
+note: >-
+  Derived from the published OpenAPI. Errors use a shared application/json
+  envelope (components.schemas.Error) with required code and message plus an
+  optional details object — not RFC 9457 problem+json. No error-code registry
+  is published in the docs we could read.
+envelope:
+  content_type: application/json
+  fields:
+    code: string (required)
+    message: string (required)
+    details: object (optional)
+problems:
+  - status: 400
+    title: API error
+    schema: '#/components/schemas/Error'
+    source_operation: openapi/deployxa-openapi-original.json#createProject
+  - status: 500
+    title: API error
+    schema: '#/components/schemas/Error'
+    source_operation: openapi/deployxa-openapi-original.json#createProject
+  - status: 400
+    title: API error
+    schema: '#/components/schemas/Error'
+    source_operation: openapi/deployxa-openapi-original.json#createDeployment
+  - status: 500
+    title: API error
+    schema: '#/components/schemas/Error'
+    source_operation: openapi/deployxa-openapi-original.json#createDeployment

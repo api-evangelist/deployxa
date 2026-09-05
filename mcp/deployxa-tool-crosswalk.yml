@@ -1,0 +1,30 @@
+generated: '2026-09-05'
+method: derived
+source: openapi/deployxa-openapi-original.json + mcp/deployxa-mcp.yml
+note: >-
+  The hosted MCP server at https://mcp.deployxa.com/mcp is auth-gated (tools/list
+  answers 401) and the provider publishes no tool list in llms.txt or docs, so no
+  tool names are known and no tool-to-operation bindings can be honestly asserted.
+  The OAuth scope names are the only public hint of the tool surface. Recorded so
+  the divergence between the two published REST operations and the eight-scope MCP
+  surface is visible rather than silently dropped.
+surfaces:
+  openapi: openapi/deployxa-openapi-original.json
+  graphql: null
+  mcp:
+    url: https://mcp.deployxa.com/mcp
+    gated: true
+    gate: OAuth 2.0 bearer (tools/list returns 401)
+crosswalk: []
+mcp_only: []
+rest_only:
+  - capability: projects
+    operations: [createProject]
+  - capability: deployments
+    operations: [createDeployment]
+coverage:
+  tools_named: 0
+  tools_bound: 0
+  mcp_only: 0
+  rest_operations_total: 2
+  rest_operations_with_tool: 0

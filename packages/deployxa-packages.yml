@@ -1,0 +1,20 @@
+generated: '2026-09-05'
+method: searched
+source: https://registry.npmjs.org/@deployxa/cli
+note: >-
+  npm is the only registry with a first-party package; PyPI (pypi.org/pypi/deployxa/json
+  404) and an npm search for "deployxa" turned up nothing else. The package is the
+  official CLI (bin: deployxa), maintained by rmoseti <info@deployxa.com>; its
+  repository URL (github.com/deployxa/deployxa) is not publicly visible — the
+  deployxa GitHub org exists but exposes only a .github repo. The developers page
+  advertises "SDKs" but no language SDK is published on any registry probed.
+packages:
+  - language: javascript
+    registry: npm
+    name: '@deployxa/cli'
+    url: https://www.npmjs.com/package/@deployxa/cli
+    install: npm install -g @deployxa/cli
+    official: true
+    kind: cli
+    version: 1.0.4
+    published: '2026-07-23'

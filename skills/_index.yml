@@ -1,0 +1,7 @@
+generated: '2026-09-05'
+method: generated
+skills:
+  - file: deployxa-deploy-a-repository.md
+    name: Deploy a Git repository on Deployxa
+    api: openapi/deployxa-openapi-original.json
+    operations: [createProject, createDeployment]

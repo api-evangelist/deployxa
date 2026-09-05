@@ -1,0 +1,62 @@
+generated: '2026-09-05'
+method: searched
+source: live probes of https://deployxa.com and https://mcp.deployxa.com
+note: >-
+  deployxa.com serves a rich agent-discovery surface: RFC 8414 authorization-server
+  metadata, RFC 9728 protected-resource metadata, an RFC 9727 api-catalog linkset,
+  and an ACP discovery document. /.well-known/openid-configuration returns 200 but
+  the body is a plain-text redirect notice ("OK. Redirecting to
+  /.well-known/oauth-authorization-server"), not an OIDC discovery document, so no
+  file is recorded for it. Negative controls
+  (/.well-known/deployxa-negative-control-*.json) returned 404 on both hosts, so
+  these 200s are real documents, not a path-echoing catch-all.
+path_echo_control: passed
+hosts:
+- host: https://deployxa.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: plain-text redirect stub pointing at /.well-known/oauth-authorization-server, not an OIDC discovery JSON — no file saved
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: deployxa-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: deployxa-oauth-protected-resource.json
+  - path: /.well-known/api-catalog
+    status: 200
+    file: deployxa-api-catalog.json
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 200
+    file: deployxa-acp.json
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: ../a2a/deployxa-agent-card.json
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://mcp.deployxa.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: deployxa-mcp-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: deployxa-mcp-oauth-protected-resource.json
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404

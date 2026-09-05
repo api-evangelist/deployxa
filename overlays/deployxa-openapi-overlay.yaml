@@ -1,0 +1,34 @@
+# generated: 2026-09-05  method: generated  source: openapi/deployxa-openapi-original.json
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Deployxa API
+  version: 1.0.0
+extends: openapi/deployxa-openapi-original.json
+actions:
+  - target: $.info
+    update:
+      contact:
+        name: Deployxa
+        url: https://deployxa.com
+        email: info@deployxa.com
+      x-apievangelist:
+        profiled: '2026-09-05'
+        authentication: authentication/deployxa-authentication.yml
+        conventions: conventions/deployxa-conventions.yml
+        errors: errors/deployxa-problem-types.yml
+  - target: $.info
+    update:
+      description: >-
+        Versioned REST API. Stable operations are under /api/v1; breaking
+        changes use a new path version. Deprecated operations announce
+        Deprecation and Sunset headers. Authentication (not declared in the
+        original spec): dashboard API keys as bearer tokens, or OAuth 2.0
+        authorization-code + PKCE per https://deployxa.com/auth.md. Both
+        published operations carry x-payment-info extensions declaring a $1.00
+        USD Stripe charge per call.
+  - target: $.paths['/projects'].post
+    update:
+      tags: [projects]
+  - target: $.paths['/deployments'].post
+    update:
+      tags: [deployments]

@@ -1,0 +1,46 @@
+generated: '2026-09-05'
+method: derived
+source: openapi/deployxa-openapi-original.json + https://deployxa.com/auth.md + https://deployxa.com/llms.txt
+authentication:
+  style: bearer (dashboard API keys) or OAuth 2.0 authorization-code + PKCE for agents
+  artifact: authentication/deployxa-authentication.yml
+versioning:
+  style: uri-path
+  current: /api/v1
+  breaking_changes: new path version; Deprecation and Sunset headers announced on deprecated operations
+idempotency:
+  coverage: none
+  note: >-
+    No idempotency-key header or replay-protection mechanism appears in the
+    published OpenAPI or in any docs surface we could read. Both published
+    operations (createProject, createDeployment) are unguarded POSTs.
+reversibility:
+  status: none
+  note: >-
+    The published contract exposes only create operations (createProject,
+    createDeployment) with no cancel/delete/rollback counterpart, and the docs
+    mention "Automated Zero-Downtime Rollbacks" as a platform feature without
+    documenting a reversal operation or window. No reversal path can be
+    asserted from published material. Note both writes carry x-payment-info
+    Stripe charge extensions ($1.00 USD), so an agent invoking them incurs a
+    real charge with no documented reversal.
+dry_run_mode:
+  status: none
+  note: llms.txt mentions "demo and preview deployment flows" but no dry-run parameter is documented in the contract.
+pagination:
+  style: null
+  note: no list operations are published in the contract.
+request_tracing:
+  header: null
+  note: not documented.
+error_envelope:
+  shape: '{code, message, details?} application/json'
+  artifact: errors/deployxa-problem-types.yml
+rate_limit_signaling:
+  headers: []
+  note: no rate-limit headers or limits documented; see rate-limits/deployxa-rate-limits.yml.
+cross_links:
+  errors: errors/deployxa-problem-types.yml
+  lifecycle: lifecycle/deployxa-lifecycle.yml
+  authentication: authentication/deployxa-authentication.yml
+  rate_limits: rate-limits/deployxa-rate-limits.yml

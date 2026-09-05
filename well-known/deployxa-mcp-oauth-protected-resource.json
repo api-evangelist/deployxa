@@ -1,0 +1,1 @@
+{"resource":"https://mcp.deployxa.com/mcp","authorization_servers":["https://mcp.deployxa.com"],"scopes_supported":["projects:read","projects:write","deployments:read","deployments:write","domains:read","domains:write","logs:read","billing:read"],"bearer_methods_supported":["header"]}

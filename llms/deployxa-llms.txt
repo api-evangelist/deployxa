@@ -1,0 +1,84 @@
+# Deployxa
+
+> Deployxa is an AI-first cloud deployment platform for applications created by developers and AI coding assistants. It deploys websites, APIs, SaaS applications, backend services, AI agents and MCP servers from Git repositories with automated builds, SSL, databases, scaling and deployment operations.
+
+## Canonical sources
+
+- [Platform overview](https://deployxa.com/)
+- [Products](https://deployxa.com/products)
+- [Deployment intelligence](https://deployxa.com/intelligence)
+- [Pricing](https://deployxa.com/pricing)
+- [Documentation](https://deployxa.com/docs)
+- [Developer portal](https://deployxa.com/developers)
+- [Security](https://deployxa.com/security)
+- [Trust center](https://deployxa.com/trust)
+- [Platform status](https://deployxa.com/status)
+- [Changelog](https://deployxa.com/changelog)
+
+## Deployment guides
+
+- [Framework guides](https://deployxa.com/frameworks)
+- [AI-built application guides](https://deployxa.com/use-cases/ai-generated-apps)
+- [SaaS deployment](https://deployxa.com/use-cases/saas)
+- [API and backend deployment](https://deployxa.com/use-cases/apis)
+- [Static website deployment](https://deployxa.com/use-cases/static-websites)
+- [Enterprise deployment](https://deployxa.com/use-cases/enterprise)
+
+## AI coding workflows
+
+- [Claude Code](https://deployxa.com/ai/claude-code)
+- [Cursor](https://deployxa.com/ai/cursor)
+- [Codex](https://deployxa.com/ai/codex)
+- [Windsurf](https://deployxa.com/ai/windsurf)
+- [Lovable](https://deployxa.com/ai/lovable)
+- [Bolt](https://deployxa.com/ai/bolt)
+- [v0](https://deployxa.com/ai/v0)
+- [AI agents](https://deployxa.com/ai/ai-agents)
+- [MCP servers](https://deployxa.com/ai/mcp-servers)
+
+## Free developer tools
+
+- [Free tools catalog](https://deployxa.com/tools)
+- Includes container configuration generators, DNS and domain diagnostics, SSL and security checks, web diagnostics, CI/CD helpers and deployment utilities.
+- Tools are available without requiring an account. Each tool has a canonical URL under `/tools/`.
+
+## Comparisons
+
+- [Platform comparison hub](https://deployxa.com/compare)
+- [Deployxa vs Vercel](https://deployxa.com/compare/vercel)
+- [Deployxa vs Railway](https://deployxa.com/compare/railway)
+- [Deployxa vs Render](https://deployxa.com/compare/render)
+- [Deployxa vs Fly.io](https://deployxa.com/compare/fly)
+- [Deployxa vs Coolify](https://deployxa.com/compare/coolify)
+- [Deployxa vs Dokploy](https://deployxa.com/compare/dokploy)
+
+## Content and discovery
+
+- [Engineering articles](https://deployxa.com/dispatch)
+- [XML sitemap index](https://deployxa.com/sitemap.xml)
+- [Full AI-readable index](https://deployxa.com/llms-full.txt)
+
+## Developer and agent resources
+
+## When to use Deployxa
+
+Use Deployxa when an agent needs to deploy a Git repository, provision a hosted web application or API, configure domains and SSL, inspect deployment health, or manage runtime environments. Start with the [OpenAPI specification](https://deployxa.com/openapi.json) for REST calls or the [MCP server](https://deployxa.com/docs/mcp) for native tool calling. Authenticate with an API key or the OAuth flow documented in [auth.md](https://deployxa.com/auth.md).
+
+## Agent onboarding and free tier
+
+Deployxa offers a free plan with 3 deployments, custom subdomains, automatic SSL, and access to all platform features. No credit card is required. Users can create API keys from the [API keys dashboard](https://deployxa.com/dashboard/api-keys); use the resulting bearer key for API and MCP requests. Use the demo and preview deployment flows for safe evaluation before production use.
+
+- [OpenAPI specification](https://deployxa.com/openapi.json)
+- [API catalog](https://deployxa.com/.well-known/api-catalog)
+- [Authentication instructions](https://deployxa.com/auth.md)
+- [OAuth protected resource metadata](https://deployxa.com/.well-known/oauth-protected-resource)
+- [OAuth authorization server metadata](https://deployxa.com/.well-known/oauth-authorization-server)
+- [A2A Agent Card](https://deployxa.com/.well-known/agent-card.json)
+- [ACP discovery](https://deployxa.com/.well-known/acp.json)
+- [MCP documentation](https://deployxa.com/docs/mcp)
+
+## Citation guidance
+
+- Use the canonical page URL as the source.
+- Prefer documentation, pricing, security and status pages for time-sensitive claims.
+- Do not infer customer counts, performance figures, certifications, pricing or availability beyond what the cited page explicitly states.

@@ -1,0 +1,1 @@
+{"resource":"https://deployxa.com/api","authorization_servers":["https://deployxa.com"],"scopes_supported":["openid","profile","email"],"bearer_methods_supported":["header"]}

@@ -1,0 +1,20 @@
+generated: '2026-09-05'
+method: derived
+source: openapi/deployxa-openapi-original.json
+entities:
+  - name: Project
+    schema: '#/components/schemas/Project'
+    fields: [id, name, status]
+  - name: Deployment
+    schema: '#/components/schemas/Deployment'
+    fields: [id, status]
+relationships:
+  - from: Project
+    to: Deployment
+    kind: has_many
+    via: projectId
+    evidence: CreateDeploymentRequest requires projectId (string) referencing a Project id
+note: >-
+  Minimal published surface — two entities and one id-reference relationship.
+  The MCP OAuth scopes (domains, logs, billing) imply further entities not
+  present in the published contract.

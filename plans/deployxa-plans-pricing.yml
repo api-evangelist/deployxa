@@ -1,0 +1,63 @@
+generated: '2026-09-05'
+method: searched
+source: https://deployxa.com/pricing
+plan_count: 4
+plans:
+  - name: Hobby
+    price: 0
+    currency: USD
+    billing_period: forever
+    included:
+      - 1 shared vCPU, 512 MB RAM
+      - 5 GB container storage
+      - 100 GB outbound bandwidth
+      - up to 3 active cloud services
+      - automated Let's Encrypt SSL
+      - free deployxa.app subdomains
+  - name: Starter Pro
+    price: 9
+    currency: USD
+    billing_period: month
+    included:
+      - 2 dedicated burst vCPU, 2 GB RAM
+      - 25 GB NVMe SSD
+      - 1 TB outbound egress
+      - up to 10 active production apps
+      - custom apex domains with auto SSL
+      - automated zero-downtime rollbacks
+  - name: Team Scale
+    price: 29
+    currency: USD
+    billing_period: month
+    included:
+      - 4 dedicated AMD EPYC cores, 8 GB RAM
+      - 100 GB NVMe storage
+      - 5 TB outbound egress
+      - unlimited active container services
+      - managed PostgreSQL, MySQL and Redis
+      - team roles and granular RBAC permissions
+  - name: Enterprise Dedicated
+    price: 199
+    currency: USD
+    billing_period: month
+    price_note: base price; dedicated multi-region VPS clusters, custom SLAs
+    included:
+      - 16+ dedicated AMD EPYC vCPU, 32+ GB RAM
+      - isolated VPC bridge networks and static IPs
+      - 99.99% availability SLA
+      - SAML SSO, SOC2 and HIPAA compliance support
+      - dedicated solution engineer and Slack channel
+overage:
+  - unit: additional RAM
+    price: $5.00 / GB / month (billed per MB-hour)
+  - unit: dedicated vCPU
+    price: $10.00 / core / month
+  - unit: NVMe SSD storage
+    price: $0.15 / GB / month
+  - unit: global egress
+    price: $0.05 / GB after monthly plan allowance
+note: >-
+  Separately, the published OpenAPI carries x-payment-info extensions declaring a
+  $1.00 USD Stripe charge on createProject ("Project provisioning") and
+  createDeployment ("Deployment execution") — per-call agentic pricing distinct
+  from the plan tiers above.

@@ -1,0 +1,44 @@
+generated: '2026-09-05'
+method: searched
+source: https://deployxa.com/auth.md
+docs: https://deployxa.com/auth.md
+note: >-
+  The published OpenAPI declares no securitySchemes, so this profile is searched
+  from the provider's agent-auth document (auth.md, saved verbatim as
+  deployxa-auth.md) and the RFC 8414 / RFC 9728 well-known metadata on
+  deployxa.com and mcp.deployxa.com. Two credential paths: API keys created in
+  the dashboard (https://deployxa.com/dashboard/api-keys) used as bearer keys per
+  llms.txt, and an OAuth 2.0 authorization-code + PKCE flow for agents with
+  dynamic registration.
+summary:
+  types: [http-bearer, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+schemes:
+  - name: apiKeyBearer
+    type: http
+    scheme: bearer
+    description: 'API key from the dashboard sent as "Authorization: Bearer <key>" for API and MCP requests.'
+    sources: [https://deployxa.com/llms.txt]
+  - name: oauthAgent
+    type: oauth2
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://deployxa.com/login
+        tokenUrl: https://deployxa.com/api/auth/token
+        pkce_required: true
+        registration_endpoint: https://deployxa.com/api/auth/extension/start
+    sources:
+      - https://deployxa.com/auth.md
+      - https://deployxa.com/.well-known/oauth-authorization-server
+  - name: mcpOAuth
+    type: oauth2
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://mcp.deployxa.com/oauth/authorize
+        tokenUrl: https://mcp.deployxa.com/oauth/token
+        pkce_required: true
+        registration_endpoint: https://mcp.deployxa.com/oauth/register
+        scopes: 8
+    sources:
+      - https://mcp.deployxa.com/.well-known/oauth-authorization-server

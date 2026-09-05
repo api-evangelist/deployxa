@@ -1,0 +1,11 @@
+generated: '2026-09-05'
+method: searched
+source: https://deployxa.com/docs + https://deployxa.com/openapi.json
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No published rate limits found: the OpenAPI declares no 429 responses or
+  rate-limit headers, and no limits are stated on the readable docs surface.
+  Docs content hydrates client-side, so a documented limit could exist behind
+  the JS render — recorded as an honest zero from what is machine-readable.

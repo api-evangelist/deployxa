@@ -1,0 +1,1 @@
+{"name":"Deployxa Agent","description":"Deployxa cloud deployment and application management agent.","url":"https://deployxa.com/api","version":"1.0.0","capabilities":{"streaming":false},"extensions":[{"uri":"https://github.com/google-agentic-commerce/AP2/tree/v0.1.0","required":true,"params":{"roles":["merchant"]}}]}

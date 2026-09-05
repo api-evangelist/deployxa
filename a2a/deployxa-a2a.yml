@@ -1,0 +1,35 @@
+generated: '2026-09-05'
+method: probed
+source: https://deployxa.com/.well-known/agent-card.json
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: deployxa.com
+conformance:
+  spec: A2A 1.0.0
+  grade: flavored
+  protocol_version: null
+  preferred_transport: null
+  deviations:
+  - no-protocolVersion
+  - no-skills-array
+  - no-defaultInputModes
+  - no-defaultOutputModes
+  note: >-
+    capabilities is a proper object ({streaming: false}) but the card omits
+    protocolVersion and skills entirely, so it fails the hard conformance checks.
+    It declares an AP2 (Agentic Payments Protocol v0.1.0) extension with
+    roles: [merchant], matching the x-payment-info Stripe charge extensions in
+    the provider's OpenAPI — an agentic-commerce posture rather than a full A2A
+    task surface.
+card:
+  name: Deployxa Agent
+  url: https://deployxa.com/api
+  version: 1.0.0
+  skills: 0
+  file: deployxa-agent-card.json
+x-evidence:
+  fetched: '2026-09-05'
+  url: https://deployxa.com/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
