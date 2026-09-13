@@ -6,36 +6,39 @@ deployment:
   endpoint: https://mcp.deployxa.com/mcp
   auth: oauth
   verified: probed
+  probe_prior: (never probed)
+  probe: gated
+  probe_why: RFC 9728 challenge on the MCP path only
+  checked: '2026-09-11'
+  source: claimed-backlog re-probe 2026-09-11
 server:
   name: deployxa
   transport: http
   url: https://mcp.deployxa.com/mcp
 source: https://mcp.deployxa.com/.well-known/oauth-protected-resource
 evidence:
-  - url: https://mcp.deployxa.com/mcp
-    method: POST tools/list
-    http_status: 401
-    body: '{"error":"A Bearer access token is required."}'
-  - url: https://mcp.deployxa.com/.well-known/oauth-protected-resource
-    http_status: 200
-    note: RFC 9728 metadata declaring resource https://mcp.deployxa.com/mcp with 8 scopes
-  - url: https://mcp.deployxa.com/.well-known/oauth-authorization-server
-    http_status: 200
-    note: RFC 8414 metadata — authorization_code + PKCE (S256), dynamic client registration at /oauth/register
-note: >-
-  Hosted remote MCP server, auth-gated: tools/list returns a bearer-token
-  challenge, so the live tool schemas require authenticated introspection and
-  are not captured here. The protected-resource scopes (projects:read/write,
-  deployments:read/write, domains:read/write, logs:read, billing:read) outline
-  the tool surface. llms.txt points MCP documentation at
-  https://deployxa.com/docs/mcp, which returned HTTP 404 at probe time.
+- url: https://mcp.deployxa.com/mcp
+  method: POST tools/list
+  http_status: 401
+  body: '{"error":"A Bearer access token is required."}'
+- url: https://mcp.deployxa.com/.well-known/oauth-protected-resource
+  http_status: 200
+  note: RFC 9728 metadata declaring resource https://mcp.deployxa.com/mcp with 8 scopes
+- url: https://mcp.deployxa.com/.well-known/oauth-authorization-server
+  http_status: 200
+  note: RFC 8414 metadata — authorization_code + PKCE (S256), dynamic client registration at /oauth/register
+note: 'Hosted remote MCP server, auth-gated: tools/list returns a bearer-token challenge, so the live
+  tool schemas require authenticated introspection and are not captured here. The protected-resource scopes
+  (projects:read/write, deployments:read/write, domains:read/write, logs:read, billing:read) outline the
+  tool surface. llms.txt points MCP documentation at https://deployxa.com/docs/mcp, which returned HTTP
+  404 at probe time.'
 scopes_supported:
-  - projects:read
-  - projects:write
-  - deployments:read
-  - deployments:write
-  - domains:read
-  - domains:write
-  - logs:read
-  - billing:read
+- projects:read
+- projects:write
+- deployments:read
+- deployments:write
+- domains:read
+- domains:write
+- logs:read
+- billing:read
 tools: []
