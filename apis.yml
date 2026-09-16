@@ -10,6 +10,16 @@ created: '2026-09-05'
 modified: '2026-09-05'
 specificationVersion: '0.21'
 tags:
+- Platform-as-a-Service
+- Cloud Deployment
+- DevOps
+- CI/CD
+- containers-docker
+- edge-hosting
+- Managed Databases
+- AIOps
+- Developer Tools
+tags_raw:
 - platform-as-a-service
 - cloud-deployment
 - devops
@@ -31,6 +41,16 @@ apis:
   humanURL: https://deployxa.com/docs
   baseURL: https://deployxa.com
   tags:
+  - Platform-as-a-Service
+  - Cloud Deployment
+  - DevOps
+  - CI/CD
+  - containers-docker
+  - edge-hosting
+  - Managed Databases
+  - AIOps
+  - Developer Tools
+  tags_raw:
   - platform-as-a-service
   - cloud-deployment
   - devops
@@ -133,3 +153,5 @@ common:
   url: overlays/deployxa-openapi-overlay.yaml
 - type: DataModel
   url: data-model/deployxa-data-model.yml
+- type: Contact
+  url: mailto:support@deployxa.com
