@@ -30,45 +30,36 @@ tags_raw:
 - ai-ops
 - developer-tools
 apis:
-- name: Deployxa Platform
-  description: AI-first autonomous cloud deployment platform API. The published OpenAPI 3.0.3 contract covers project
-    creation and deployment execution under /api/v1 (versioned URI paths, Deprecation/Sunset headers on deprecated
-    operations), with each write operation carrying an x-payment-info extension declaring a $1.00 USD Stripe charge
-    per call. Authentication is dashboard API keys as bearer tokens or an OAuth 2.0 authorization-code + PKCE agent
-    flow; a hosted MCP server at mcp.deployxa.com/mcp exposes an OAuth-gated tool surface scoped to projects, deployments,
-    domains, logs, and billing.
-  image: https://deployxa.com/og/home.png
+- aid: deployxa:deployxa-deployments-api
+  name: Deployxa Deployments API
+  description: The Deployments API from Deployxa — 1 operation(s) for deployments.
   humanURL: https://deployxa.com/docs
   baseURL: https://deployxa.com
   tags:
-  - Platform-as-a-Service
-  - Cloud Deployment
-  - DevOps
-  - CI/CD
-  - containers-docker
-  - edge-hosting
-  - Managed Databases
-  - AIOps
-  - Developer Tools
-  tags_raw:
-  - platform-as-a-service
-  - cloud-deployment
-  - devops
-  - ci-cd
-  - containers-docker
-  - edge-hosting
-  - managed-databases
-  - ai-ops
-  - developer-tools
+  - Deployments
   properties:
+  - type: OpenAPI
+    url: openapi/deployxa-deployments-api-openapi.yml
   - type: Documentation
     url: https://deployxa.com/docs
   - type: APIReference
     url: https://deployxa.com/docs/api
+  - type: ToolCrosswalk
+    url: mcp/deployxa-tool-crosswalk.yml
+- aid: deployxa:deployxa-projects-api
+  name: Deployxa Projects API
+  description: The Projects API from Deployxa — 1 operation(s) for projects.
+  humanURL: https://deployxa.com/docs
+  baseURL: https://deployxa.com
+  tags:
+  - Projects
+  properties:
   - type: OpenAPI
-    url: openapi/deployxa-openapi-original.json
-  - type: MCPServer
-    url: mcp/deployxa-mcp.yml
+    url: openapi/deployxa-projects-api-openapi.yml
+  - type: Documentation
+    url: https://deployxa.com/docs
+  - type: APIReference
+    url: https://deployxa.com/docs/api
   - type: ToolCrosswalk
     url: mcp/deployxa-tool-crosswalk.yml
 maintainers:
@@ -85,6 +76,8 @@ x-enrichment:
   artifacts_added: 32
   pass: local-v3
 common:
+- type: MCPServer
+  url: mcp/deployxa-mcp.yml
 - type: Website
   url: https://deployxa.com
 - type: AgenticAccess
