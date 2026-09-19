@@ -16,7 +16,7 @@ tags:
 - CI/CD
 - containers-docker
 - edge-hosting
-- Managed Databases
+- Managed Database
 - AIOps
 - Developer Tools
 tags_raw:
@@ -36,6 +36,8 @@ apis:
   humanURL: https://deployxa.com/docs
   baseURL: https://deployxa.com
   tags:
+  - Deployment
+  tags_raw:
   - Deployments
   properties:
   - type: OpenAPI
@@ -52,6 +54,8 @@ apis:
   humanURL: https://deployxa.com/docs
   baseURL: https://deployxa.com
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
