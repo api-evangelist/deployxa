@@ -1,0 +1,26 @@
+{
+  "provider": "deployxa",
+  "sources": [
+    "_original/deployxa-openapi-original.json"
+  ],
+  "outputs": [
+    "deployxa-deployments-api-openapi.yml",
+    "deployxa-projects-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "deployxa-openapi-original.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "deployxa-openapi-original.json: tagged paths POST /projects -> Projects",
+    "deployxa-openapi-original.json: tagged paths POST /deployments -> Deployments",
+    "deployxa-openapi-original.json: declared missing tag: Deployments",
+    "deployxa-openapi-original.json: declared missing tag: Projects",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "deployxa-deployments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "deployxa-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}
