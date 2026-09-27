@@ -19,6 +19,7 @@ tags:
 - Managed Database
 - AIOps
 - Developer Tools
+- A2A
 tags_raw:
 - platform-as-a-service
 - cloud-deployment
@@ -29,12 +30,12 @@ tags_raw:
 - managed-databases
 - ai-ops
 - developer-tools
+- A2A
 apis:
 - aid: deployxa:deployxa-deployments-api
   name: Deployxa Deployments API
   description: The Deployments API from Deployxa — 1 operation(s) for deployments.
   humanURL: https://deployxa.com/docs
-  baseURL: https://deployxa.com
   tags:
   - Deployment
   tags_raw:
@@ -52,7 +53,6 @@ apis:
   name: Deployxa Projects API
   description: The Projects API from Deployxa — 1 operation(s) for projects.
   humanURL: https://deployxa.com/docs
-  baseURL: https://deployxa.com
   tags:
   - Project
   tags_raw:

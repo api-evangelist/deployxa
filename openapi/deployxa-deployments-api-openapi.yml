@@ -38,13 +38,6 @@ paths:
       tags:
       - Deployments
 components:
-  responses:
-    Error:
-      description: API error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
     Deployment:
       type: object
@@ -75,6 +68,13 @@ components:
           type: string
         branch:
           type: string
+  responses:
+    Error:
+      description: API error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
 x-service-info:
   categories:
   - cloud deployment
