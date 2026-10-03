@@ -46,6 +46,15 @@ components:
           type: string
         status:
           type: string
+    CreateDeploymentRequest:
+      type: object
+      required:
+      - projectId
+      properties:
+        projectId:
+          type: string
+        branch:
+          type: string
     Error:
       type: object
       required:
@@ -59,15 +68,6 @@ components:
         details:
           type: object
           additionalProperties: true
-    CreateDeploymentRequest:
-      type: object
-      required:
-      - projectId
-      properties:
-        projectId:
-          type: string
-        branch:
-          type: string
   responses:
     Error:
       description: API error

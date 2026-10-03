@@ -39,7 +39,27 @@ paths:
       tags:
       - Projects
 components:
+  responses:
+    Error:
+      description: API error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
+    CreateProjectRequest:
+      type: object
+      required:
+      - name
+      - repositoryUrl
+      properties:
+        name:
+          type: string
+        repositoryUrl:
+          type: string
+          format: uri
+        branch:
+          type: string
     Project:
       type: object
       properties:
@@ -62,26 +82,6 @@ components:
         details:
           type: object
           additionalProperties: true
-    CreateProjectRequest:
-      type: object
-      required:
-      - name
-      - repositoryUrl
-      properties:
-        name:
-          type: string
-        repositoryUrl:
-          type: string
-          format: uri
-        branch:
-          type: string
-  responses:
-    Error:
-      description: API error
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
 x-service-info:
   categories:
   - cloud deployment
