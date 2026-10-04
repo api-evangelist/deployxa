@@ -80,6 +80,9 @@ x-enrichment:
   artifacts_added: 32
   pass: local-v3
 common:
+- type: CapabilityMap
+  url: capabilities/deployxa-capability-edges.yml
+  name: Deployxa Business Capability Map
 - type: MCPServer
   url: mcp/deployxa-mcp.yml
 - type: Website

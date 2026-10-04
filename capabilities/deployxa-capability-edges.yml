@@ -1,0 +1,26 @@
+slug: deployxa
+provider: Deployxa
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Deployments
+  spec_file: deployxa-deployments-api-openapi.yml
+  capability_id: BC-4210.40
+  capability_id_l1: BC-4210
+  capability_name: Deployment Orchestration
+  confidence: 0.85
+  evidence: 'POST /deployments createDeployment ''Create a deployment''; vendor: ''autonomous cloud deployment
+    platform for deploying AI-built and containerized web apps to production'''
+  reason: The operation creates a deployment of an application to production on a cloud deployment platform,
+    which is Deployment Orchestration within Software Release & Deployment Management. L2 chosen over
+    CI because the artefact being created is a production deployment, not a build.
