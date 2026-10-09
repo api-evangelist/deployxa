@@ -61,3 +61,35 @@ note: >-
   $1.00 USD Stripe charge on createProject ("Project provisioning") and
   createDeployment ("Deployment execution") — per-call agentic pricing distinct
   from the plan tiers above.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units: []
+  plans:
+  - name: Hobby
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Starter Pro
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Team Scale
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise Dedicated
+    access: other
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []

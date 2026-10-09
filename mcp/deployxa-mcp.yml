@@ -42,3 +42,25 @@ scopes_supported:
 - logs:read
 - billing:read
 tools: []
+rfc9728:
+  endpoint: https://mcp.deployxa.com/mcp
+  metadata_url: https://mcp.deployxa.com/.well-known/oauth-protected-resource
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://mcp.deployxa.com/mcp
+    authorization_servers:
+    - https://mcp.deployxa.com
+    scopes_supported:
+    - projects:read
+    - projects:write
+    - deployments:read
+    - deployments:write
+    - domains:read
+    - domains:write
+    - logs:read
+    - billing:read
+    bearer_methods_supported:
+    - header
