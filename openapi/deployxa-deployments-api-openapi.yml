@@ -46,6 +46,15 @@ components:
           schema:
             $ref: '#/components/schemas/Error'
   schemas:
+    CreateDeploymentRequest:
+      type: object
+      required:
+      - projectId
+      properties:
+        projectId:
+          type: string
+        branch:
+          type: string
     Deployment:
       type: object
       properties:
@@ -66,15 +75,6 @@ components:
         details:
           type: object
           additionalProperties: true
-    CreateDeploymentRequest:
-      type: object
-      required:
-      - projectId
-      properties:
-        projectId:
-          type: string
-        branch:
-          type: string
 x-service-info:
   categories:
   - cloud deployment
