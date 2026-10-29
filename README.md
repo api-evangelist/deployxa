@@ -1,4 +1,4 @@
-# deployxa
+# Deployxa
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -63,3 +63,137 @@
 >
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
+
+AI-first autonomous cloud deployment platform for deploying AI-built and containerized web apps to production, featuring a deployment intelligence engine, global edge deployment, managed databases, VPS clusters, and a CLI. Publishes an OpenAPI 3.0.3 contract at /openapi.json, an llms.txt, an A2A agent card with an AP2 agentic-payments extension, an RFC 9727 api-catalog, OAuth 2.0 discovery metadata, and an OAuth-gated hosted MCP server at mcp.deployxa.com — all verified live 2026-09-05.
+
+**Areas:** Platform-as-a-Service · Cloud Deployment · DevOps · CI/CD · containers-docker · edge-hosting · Managed Database · AIOps · Developer Tools · A2A
+
+## Deployxa on APIs.io
+
+Everything profiled for Deployxa is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/deployxa/](https://apis.io/providers/deployxa/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Deployxa Deployments API](https://apis.io/apis/deployxa/deployxa-deployments-api/) — The Deployments API from Deployxa — 1 operation(s) for deployments.
+- [Deployxa Projects API](https://apis.io/apis/deployxa/deployxa-projects-api/) — The Projects API from Deployxa — 1 operation(s) for projects.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [deployxa](https://apis.io/servers/deployxa/deployxa/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Deployxa Agentic Access](https://apis.io/agentic-access/deployxa/deployxa-agentic-access/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Deployxa Openapi Overlay](https://apis.io/overlays/deployxa/deployxa-openapi-overlay/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Deployxa Authentication](https://apis.io/security/deployxa/deployxa-authentication/)
+- [Deployxa Domain Security](https://apis.io/security/deployxa/deployxa-domain-security/)
+- [Deployxa Trust Center](https://apis.io/security/deployxa/deployxa-trust-center/)
+- [Deployxa Vulnerability Disclosure](https://apis.io/security/deployxa/deployxa-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Deployxa Scopes](https://apis.io/scopes/deployxa/deployxa-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Deployxa Plans Pricing](https://apis.io/plans/deployxa/deployxa-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Deployxa Rate Limits](https://apis.io/rate-limits/deployxa/deployxa-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://deployxa.com)
+- [Getting started](https://deployxa.com/docs/getting-started)
+- [Pricing](https://deployxa.com/pricing)
+- [Sign up](https://deployxa.com/dashboard)
+- [Support](https://deployxa.com/contact)
+- [Changelog](https://deployxa.com/changelog)
+- [Blog](https://deployxa.com/dispatch)
+- [Security](https://deployxa.com/security)
+- [Terms of service](https://deployxa.com/terms)
+- [Privacy policy](https://deployxa.com/privacy)
+- [GitHub](https://github.com/deployxa)
+- [Status](https://deployxa.com/status)
+
+## API Evangelist rating
+
+**Kin Score 59.5** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 39.8 |
+| Contract governance | 18.2 |
+| Operational transparency | 52.6 |
+| Developer ergonomics | 66.1 |
+| Access clarity | 84.2 |
+
+**Agent readiness 54.1** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | flavored (partial credit) |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | self |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 45.1** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/deployxa/](https://apis.io/providers/deployxa/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Deployxa: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/deployxa/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
